@@ -16,7 +16,7 @@ const Coffee = ({ coffee }) => {
       reverseButtons: true,
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://coffee-store-server-dev-rahim.vercel.app/delete/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -34,7 +34,10 @@ const Coffee = ({ coffee }) => {
     });
   };
   return (
-    <div className="card card-side bg-base-100 shadow-xl justify-evenly ">
+    <div
+      className="card card-side bg-red-50 shadow-xl justify-evenly ;
+] "
+    >
       <figure>
         <img src={photo} alt="Movie" />
       </figure>
@@ -48,7 +51,7 @@ const Coffee = ({ coffee }) => {
           <button className="btn  btn-circle btn-sm">
             <FaEye />
           </button>
-          <Link to={`update/${_id}`}>
+          <Link to={`/coffees/${_id}`}>
             <button className="btn  btn-circle btn-sm">
               <FaPencilAlt></FaPencilAlt>
             </button>

@@ -8,7 +8,7 @@ const Home = () => {
       <span>--- Sip & Savor ---</span>
       <h2 className="card-title">Our Popular Products</h2>
       <Link to="/add-coffees">
-        <button className="btn btn-sm">Add Coffee</button>
+        <button className="btn btn-sm mb-8">Add Coffee</button>
       </Link>
       <div className="grid md:grid-cols-2 md:gap-8">
         {coffees.map((coffee) => (
